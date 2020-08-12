@@ -18,12 +18,12 @@ RUN if [ "${TRAVIS_COMMIT}" ]; then \
     mkdir judge && \
     cd judge && \
     git init && \
-    git remote add origin https://github.com/pzread/judge.git && \
+    git remote add origin https://github.com/lys0829/judge.git && \
     git fetch origin && \
     git fetch origin ${TRAVIS_COMMIT} && \
     git reset --hard FETCH_HEAD; \
     else \
-    git clone https://github.com/pzread/judge.git; fi
+    git clone https://github.com/lys0829/judge.git; fi
 
 RUN cd judge && \
     pip3 install -r requirements.txt && \
