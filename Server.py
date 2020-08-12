@@ -163,7 +163,7 @@ class WebSocketClient(WebSocketHandler):
     def on_message(self, msg):
         '''Handle message event'''
 
-        obj = json.loads(msg, 'utf-8')
+        obj = json.loads(msg)
         JudgeDispatcher.emit_chal(obj,
             lambda res: self.write_message(json.dumps(res)))
 
